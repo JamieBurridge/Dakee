@@ -1,15 +1,19 @@
-.splash_screen {
+.splash_screen,
+.splash_screen_clicked {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   height: 100vh;
   background: var(--background-gradient);
+}
+
+.splash_screen {
+  justify-content: center;
 
   .logo_container {
     text-align: center;
-    color: var(--text-color);
+    color: var(--color-primary);
 
     p {
       padding-top: 10px;
@@ -20,7 +24,51 @@
     position: absolute;
     bottom: 60px;
 
-    color: var(--text-color-more-muted);
+    color: var(--color-muted);
     text-align: center;
+  }
+}
+
+.splash_screen_clicked {
+  .logo_container {
+    margin-top: 140px;
+    margin-bottom: 80px;
+  }
+
+  .auth_container {
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    p {
+      color: var(--color-muted);
+      padding-top: 18px;
+      padding-bottom: 60px;
+    }
+
+    button {
+      display: block;
+      margin: auto;
+      background: transparent;
+    }
+
+    .button_signup {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-primary);
+
+      border: 2px solid var(--color-primary);
+      border-radius: 70px;
+
+      padding: 20px 80px;
+    }
+
+    .button_login {
+      color: var(--color-muted);
+      border: none;
+      padding-top: 25px;
+    }
   }
 }
