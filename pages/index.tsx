@@ -1,5 +1,16 @@
-import styles from "./index.module.scss";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Home() {
-  return <div className={styles.test}>Home</div>;
+  const hasVisited = false;
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!hasVisited) {
+      router?.push("/welcome");
+    }
+  }, []);
+
+  return <main>Home</main>;
 }
