@@ -30,4 +30,17 @@ body {
   font-family: Inter;
   font-weight: 400;
   font-size: 15px;
+  color: var(--color-muted);
+
+  background: var(--background-gradient);
+  padding: 0 50px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
 }

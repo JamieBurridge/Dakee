@@ -3,34 +3,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  height: 100vh;
-  background: var(--background-gradient);
 }
 
 .splash_screen {
   justify-content: center;
+  text-align: center;
 
-  .logo_container {
-    text-align: center;
+  .tagline {
     color: var(--color-primary);
+  }
 
-    p {
-      padding-top: 10px;
-    }
+  p {
+    padding-top: 10px;
   }
 
   .continue_container {
     position: absolute;
     bottom: 60px;
 
-    color: var(--color-muted);
     text-align: center;
   }
 }
 
 .splash_screen_clicked {
-  .logo_container {
+  .logo {
     margin-top: 140px;
     margin-bottom: 80px;
   }
@@ -43,7 +39,6 @@
     }
 
     p {
-      color: var(--color-muted);
       padding-top: 18px;
       padding-bottom: 60px;
     }
