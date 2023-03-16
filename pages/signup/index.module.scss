@@ -58,6 +58,16 @@
         color: var(--color-muted);
       }
     }
+
+    .password_input_container {
+      position: relative;
+
+      img {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+      }
+    }
   }
 
   .other_signup_methods {
