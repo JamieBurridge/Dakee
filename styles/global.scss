@@ -18,6 +18,8 @@
   --chat-bubble-yours: #e9135c;
 
   --notification-color: #e80f5d;
+
+  --default-padding: 50px;
 }
 
 * {
@@ -31,6 +33,9 @@ body {
   font-weight: 400;
   font-size: 15px;
   color: var(--color-muted);
+
+  max-width: 500px;
+  margin: 0 auto;
 
   background: var(--background-gradient);
   padding: 0 50px;

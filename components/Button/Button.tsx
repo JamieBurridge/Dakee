@@ -5,7 +5,7 @@ import Link from "next/link";
 
 interface Button {
   text: string;
-  link: string;
+  link?: string;
   type: "button" | "submit";
 }
 

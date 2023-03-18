@@ -310,12 +310,24 @@ scheduler@^0.23.0:
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==
 
+ssr-window@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.2.tgz#dc6b3ee37be86ac0e3ddc60030f7b3bc9b8553be"
+  integrity sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==
+
 styled-jsx@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/styled-jsx/-/styled-jsx-5.1.1.tgz#839a1c3aaacc4e735fed0781b8619ea5d0009d1f"
   integrity sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==
   dependencies:
     client-only "0.0.1"
+
+swiper@^9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-9.1.1.tgz#8e8d49a3667d9ef8997cddb023d913c422e72142"
+  integrity sha512-D1zArOwI6XCXCYBULPA4jTxpqp5SQtvntjinbXNZwXzj6P3KS51zSWuMarCLXq5oRISay4nX+TuShpxz8qhtbw==
+  dependencies:
+    ssr-window "^4.0.2"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
