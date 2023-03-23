@@ -28,6 +28,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 body {
   font-family: Inter;
   font-weight: 400;
@@ -36,14 +43,17 @@ body {
 
   max-width: 500px;
   margin: 0 auto;
+  background-color: #222;
+}
 
-  background: var(--background-gradient);
-  // padding: 0 35px;
+#__next {
+  height: 100%;
 }
 
 main {
-  min-height: 100vh;
+  min-height: 100%;
   padding: 0 50px;
+  background: var(--background-gradient);
 }
 
 a {

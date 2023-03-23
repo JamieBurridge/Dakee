@@ -1,0 +1,21 @@
+.questionaire_option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+
+  height: 135px;
+  width: 135px;
+
+  border: 2px solid #fff;
+  border-radius: 20px;
+
+  img {
+    width: 40px;
+  }
+
+  p {
+    color: var(--color-primary);
+  }
+}

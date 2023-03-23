@@ -1,13 +1,13 @@
 .tutorial_main {
   display: grid;
-  grid-template-rows: 5% 80% 15%;
+  grid-template-rows: 100px auto;
+  gap: 40px;
 
   padding-bottom: 20px;
 
   .step_information {
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
 
     h2 {
       font-size: 36px;
