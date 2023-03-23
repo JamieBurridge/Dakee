@@ -1,0 +1,15 @@
+.small_logo_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding-top: 30px;
+
+  img:nth-child(1) {
+    width: 10px;
+  }
+
+  img:nth-child(2) {
+    width: 55px;
+    height: 55px;
+  }
+}

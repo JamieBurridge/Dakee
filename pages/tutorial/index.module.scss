@@ -1,13 +1,8 @@
 .tutorial_main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 5% 80% 15%;
 
-  padding-top: 35px;
-
-  .small_logo_container {
-    align-self: end;
-    margin-right: -20px;
-  }
+  padding-bottom: 20px;
 
   .step_information {
     display: flex;
@@ -28,29 +23,29 @@
     .step_information_text {
       padding-bottom: 25px;
     }
+  }
 
-    .steps_progress {
-      display: flex;
-      justify-content: center;
-      justify-self: end;
-      gap: 15px;
+  .steps_progress {
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    gap: 15px;
 
-      padding-top: 20px;
-      padding-bottom: 35px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-      div {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: var(--color-muted);
-      }
+    div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-muted);
     }
+  }
 
-    .skip_tutorial {
-      display: flex;
-      justify-content: center;
-      justify-self: end;
-      color: var(--color-muted);
-    }
+  .skip_tutorial {
+    display: flex;
+    justify-content: center;
+    // justify-self: end;
+    color: var(--color-muted);
   }
 }
