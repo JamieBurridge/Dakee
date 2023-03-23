@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./index.module.scss";
 import Button from "../../components/Button/Button";
 import { useState } from "react";
+import Topbar from "../../components/Topbar/Topbar";
 
 export default function Signup() {
   const [passwordHidden, setPasswordHidden] = useState(true);
@@ -9,11 +10,7 @@ export default function Signup() {
   return (
     <main className={styles.signup_container}>
       <div>
-        <img
-          src="/assets/back.svg"
-          alt="Back arrow"
-          className={styles.back_arrow}
-        />
+        <Topbar link="welcome" />
       </div>
       <img src="/assets/logo.svg" alt="Dakee logo" className={styles.logo} />
       <div>

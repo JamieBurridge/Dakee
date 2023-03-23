@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Button from "../../components/Button/Button";
 import { stepsData } from "../../helpers/stepsData";
 import styles from "./index.module.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
+import Topbar from "../../components/Topbar/Topbar";
 
 export default function Tutorial() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -46,10 +46,7 @@ export default function Tutorial() {
       onTouchStart={(e) => handleTouchStart(e)}
       onTouchEnd={(e) => handleTouchEnd(e)}
     >
-      <div className={styles.small_logo_container}>
-        <img src="/assets/logo_small.svg" alt="Small Dakee logo" />
-      </div>
-
+      <Topbar link="signup" />
       {currentStep < stepsData.length && currentStep >= 0 ? (
         <div className={styles.step_information}>
           {stepsData[currentStep].heading.map((heading, index) => (
