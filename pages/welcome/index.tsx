@@ -20,7 +20,9 @@ export default function welcome() {
               Hey, <br /> have we met?
             </h1>
             <p>Sign up to start or log in to your account.</p>
-            <Button text="Sign up" link="/signup" type="button"></Button>
+            <Button link="/signup" type="button">
+              Sign up
+            </Button>
             <button className={styles.button_login}>Log in</button>
           </div>
         </>

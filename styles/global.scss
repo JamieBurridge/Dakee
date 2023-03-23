@@ -38,11 +38,12 @@ body {
   margin: 0 auto;
 
   background: var(--background-gradient);
-  padding: 0 50px;
+  // padding: 0 35px;
 }
 
 main {
   min-height: 100vh;
+  padding: 0 50px;
 }
 
 a {

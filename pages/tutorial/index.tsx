@@ -70,7 +70,9 @@ export default function Tutorial() {
           </section>
 
           {currentStep == stepsData.length - 1 && (
-            <Button text="Done" type="button" link="/tutorial-done" />
+            <Button type="button" link="/tutorial-done">
+              Done
+            </Button>
           )}
 
           {/* Progress dots */}
@@ -89,7 +91,7 @@ export default function Tutorial() {
           </div>
 
           {currentStep != stepsData.length - 1 && (
-            <Link href="/" className={styles.skip_tutorial}>
+            <Link href="/tutorial-done" className={styles.skip_tutorial}>
               Skip the tutorial
             </Link>
           )}

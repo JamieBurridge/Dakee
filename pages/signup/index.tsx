@@ -35,7 +35,9 @@ export default function Signup() {
               placeholder="Password"
             />
           </div>
-          <Button text="Sign up" link="/tutorial" type="button" />
+          <Button link="/tutorial" type="button">
+            Sign up
+          </Button>
         </form>
         <div className={styles.other_signup_methods}>
           <p>or sign up using:</p>

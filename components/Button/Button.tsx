@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 interface Button {
-  text: string;
+  children: any;
   link?: string;
   type: "button" | "submit";
 }
 
-export default function Button({ text, link, type }: Button) {
+export default function Button({ children, link, type }: Button) {
   const router = useRouter();
 
   return (
@@ -19,7 +19,7 @@ export default function Button({ text, link, type }: Button) {
       type={type}
       onClick={() => link && router.push(link)}
     >
-      {text}
+      {children}
     </button>
   );
 }

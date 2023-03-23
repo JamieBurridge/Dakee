@@ -1,0 +1,25 @@
+.tutorial_done_main {
+  display: grid;
+  grid-template-rows: 100px auto;
+
+  padding: 0 35px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    h1 {
+      color: var(--color-primary);
+      font-size: 36px;
+    }
+
+    p {
+      color: var(--color-muted);
+      padding-top: 10px;
+      margin-bottom: 40px;
+    }
+  }
+}
