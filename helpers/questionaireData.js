@@ -1,5 +1,6 @@
 export const questionaireData = [
   {
+    stepType: "CardSelection",
     heading: "I am a:",
     options: [
       {
@@ -13,6 +14,7 @@ export const questionaireData = [
     ],
   },
   {
+    stepType: "CardSelection",
     heading: "Age:",
     options: [
       {
@@ -30,6 +32,7 @@ export const questionaireData = [
     ],
   },
   {
+    stepType: "CardSelection",
     heading: "Gender:",
     options: [
       {
@@ -51,10 +54,11 @@ export const questionaireData = [
     ],
   },
   {
-    inputOptions: "Country",
+    stepType: "Country",
   },
   {
-    heading: "Travel experiecne preferences:",
+    stepType: "CardSelection",
+    heading: "Travel experience preferences:",
     options: [
       {
         icon: "/assets/party.svg",
@@ -67,6 +71,10 @@ export const questionaireData = [
       {
         icon: "/assets/art.svg",
         text: "Art",
+      },
+      {
+        icon: "/assets/history.svg",
+        text: "History",
       },
       {
         icon: "/assets/music.svg",

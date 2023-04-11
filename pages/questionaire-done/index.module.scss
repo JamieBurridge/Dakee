@@ -1,0 +1,17 @@
+.questionaire_done_main {
+  display: grid;
+  grid-template-rows: 100px auto;
+  height: 100vh;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      color: var(--color-primary);
+      font-size: 36px;
+      padding-bottom: 50px;
+    }
+  }
+}

@@ -28,6 +28,7 @@
       .inputOption {
         display: flex;
         flex-direction: column;
+        gap: 30px;
 
         label {
           color: var(--color-primary);
@@ -65,6 +66,10 @@
             color: var(--color-muted);
           }
         }
+      }
+
+      .addCountry {
+        cursor: pointer;
       }
     }
 

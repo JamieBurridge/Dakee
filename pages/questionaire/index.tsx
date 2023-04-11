@@ -5,10 +5,15 @@ import { useState } from "react";
 import QuestionaireOption from "../../components/QuestionaireOption/QuestionaireOption";
 import { questionaireData } from "../../helpers/questionaireData";
 import Button from "../../components/Button/Button";
+import { agesData } from "../../helpers/ages";
+import { gendersData } from "../../helpers/genders";
+import { userTypeData } from "../../helpers/user_type";
+import { topicsData } from "../../helpers/topics";
 
 export default function questionaire() {
   const [step, setStep] = useState(0);
-  const [countryInputAmount, setCountryInputAmount] = useState(1);
+  const [countryInputsAmount, setCountryInputsAmount] = useState(1);
+  const countryInputs = Array(countryInputsAmount).fill("");
 
   return (
     <main className={styles.questionaire_main}>
@@ -24,31 +29,51 @@ export default function questionaire() {
           className={styles.options_grid}
           style={{
             gridTemplateColumns: `${
-              questionaireData[step]?.options
+              questionaireData[step].stepType == "CardSelection"
                 ? "repeat(2, 1fr)"
-                : "repeat(1,1fr)"
+                : "repeat(1, 1fr)"
             }`,
-
-            gap: `${questionaireData[step]?.options ? "20px" : "80px"}`,
+            gap: `${
+              questionaireData[step].stepType == "CardSelection"
+                ? "20px"
+                : "80px"
+            }`,
           }}
         >
-          {questionaireData[step]?.options?.map((option, index) => (
-            <QuestionaireOption
-              icon={option.icon}
-              text={option.text}
-              key={index}
-            />
-          ))}
+          {questionaireData[step].stepType == "CardSelection" &&
+            questionaireData[step]?.options?.map((option, index) => (
+              <QuestionaireOption
+                icon={option.icon}
+                text={option.text}
+                key={index}
+              />
+            ))}
 
-          {questionaireData[step]?.inputOptions == "Country" && (
+          {questionaireData[step]?.stepType == "Country" && (
             <>
               <div className={styles.inputOption}>
                 <label htmlFor="country">I currently live in:</label>
                 <input type="text" name="country" placeholder="City, Country" />
               </div>
+
               <div className={styles.inputOption}>
                 <label htmlFor="country">I can give advices for:</label>
-                <input type="text" name="country" placeholder="City, Country" />
+
+                {countryInputs.map((input, index) => (
+                  <input
+                    type="text"
+                    name="country"
+                    placeholder="City, Country"
+                    key={index}
+                  />
+                ))}
+              </div>
+
+              <div
+                onClick={() => setCountryInputsAmount(countryInputsAmount + 1)}
+                className={styles.addCountry}
+              >
+                + Add another place
               </div>
             </>
           )}

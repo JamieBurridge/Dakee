@@ -1,15 +1,17 @@
 .small_logo_container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: max-content;
+  height: 100px;
 
-  img:nth-child(1) {
+  .arrow {
     width: 10px;
   }
 
-  img:nth-child(2) {
+  .logo {
     width: 55px;
     height: 55px;
+    justify-self: end;
+    float: right;
   }
 }

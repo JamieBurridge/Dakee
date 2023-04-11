@@ -36,6 +36,7 @@ body {
 }
 
 body {
+  position: relative;
   font-family: Inter;
   font-weight: 400;
   font-size: 15px;
@@ -59,4 +60,8 @@ main {
 a {
   color: var(--color-primary);
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
