@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Topbar showBackArrow={false} />
+      <Topbar showBackArrow={false} menu={true} />
 
       <FiltersOverlay
         showOverlay={showFilterOverlay}
