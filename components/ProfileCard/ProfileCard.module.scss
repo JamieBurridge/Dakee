@@ -1,0 +1,57 @@
+.profile_card {
+  background-color: var(--color-primary);
+  border-radius: 26px;
+
+  .profile_details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+
+    padding: 15px 25px;
+
+    .profile_name {
+      color: var(--color-secondary);
+      font-weight: 700;
+    }
+
+    .profile_rating {
+      color: var(--color-terciary);
+    }
+  }
+
+  .profile_picture_container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .profile_topics {
+    color: var(--color-secondary);
+    font-size: 13px;
+    padding: 15px 25px;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .profile_ask_for_advice {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 20px 20px;
+
+    p {
+      color: var(--color-secondary);
+      font-size: 13px;
+    }
+  }
+}
