@@ -8,7 +8,7 @@ const dummyProfiles = [
   {
     name: "Iva Hardy",
     rating: "4.6",
-    picture: "https://picsum.photos/id/1001/200/180",
+    picture: "/assets/profile-pic.jpeg",
     topics: [{ name: "art" }, { name: "food" }, { name: "music" }],
   },
 ];
