@@ -1,0 +1,24 @@
+.chat_preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+
+  .chat_profile_pic {
+    width: 55px;
+    border-radius: 50%;
+  }
+
+  .chat_details {
+    color: var(--color-secondary);
+
+    .chat_info {
+      padding-bottom: 5px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}

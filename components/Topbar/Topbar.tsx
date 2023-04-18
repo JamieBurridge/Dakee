@@ -8,6 +8,7 @@ interface Topbar {
   link?: string | undefined;
   showLogo?: boolean;
   showBackArrow?: boolean;
+  useSecondaryColor?: boolean;
   offsetTop?: string;
   menu?: boolean;
   onClick?: any;
@@ -15,8 +16,9 @@ interface Topbar {
 
 export default function Topbar({
   link,
-  showBackArrow = true,
   showLogo = true,
+  showBackArrow = true,
+  useSecondaryColor,
   offsetTop = "35px",
   menu = false,
   onClick,
@@ -35,7 +37,11 @@ export default function Topbar({
         <div>
           {showBackArrow && (
             <img
-              src="/assets/back.svg"
+              src={
+                useSecondaryColor
+                  ? "/assets/back_orange.svg"
+                  : "/assets/back.svg"
+              }
               alt="Back arrow"
               onClick={() => router.push(link)}
               className={styles.arrow}
@@ -46,7 +52,11 @@ export default function Topbar({
         <div>
           {showLogo && (
             <img
-              src="/assets/logo_small.svg"
+              src={
+                useSecondaryColor
+                  ? "/assets/logo_orange.svg"
+                  : "/assets/logo_small.svg"
+              }
               alt="Small Dakee logo"
               className={styles.logo}
               onClick={() => (menu ? setShowMenu(true) : onClick())}

@@ -1,10 +1,7 @@
-import React from "react";
-import styles from "./FiltersOverlay.module.scss";
-import IconBack from "../Icons/IconBack";
-import IconFilter from "../Icons/IconFilter";
-import { useState, useEffect } from "react";
-import { topicsData } from "../../helpers/topics";
+import { useEffect, useState } from "react";
 import { gendersData } from "../../helpers/genders";
+import { topicsData } from "../../helpers/topics";
+import styles from "./FiltersOverlay.module.scss";
 
 const FiltersOverlay = ({ showOverlay, setShowOverlay }) => {
   const [filterSelections, setFilterSelections] = useState({
@@ -31,19 +28,11 @@ const FiltersOverlay = ({ showOverlay, setShowOverlay }) => {
             className={styles.back_arrow_container}
             onClick={() => setShowOverlay(false)}
           >
-            <IconBack
-              color={"var(--color-secondary)"}
-              height={"23px"}
-              width={"10px"}
-            />
+            <img src="/assets/back_orange.svg" alt="Back Arrow" />
           </div>
           <div className={styles.content}>
             <div className={styles.heading_container}>
-              <IconFilter
-                color={"var(--color-secondary)"}
-                height={"15px"}
-                width={"15px"}
-              />
+              <img src="/assets/filter_orange.svg" alt="Filter Icon" />
               Filters
             </div>
 

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import IconBack from "../Icons/IconBack";
 import styles from "./Menu.module.scss";
 
 interface MenuInterface {
@@ -39,11 +38,7 @@ export default function Menu({ showMenu, setShowMenu }: MenuInterface) {
             className={styles.back_arrow_container}
             onClick={() => setShowMenu(false)}
           >
-            <IconBack
-              color={"var(--color-secondary)"}
-              height={"23px"}
-              width={"10px"}
-            />
+            <img src="/assets/back_orange.svg" alt="Back arrow" />
           </div>
           <div className={styles.content}>
             <h1>Menu</h1>

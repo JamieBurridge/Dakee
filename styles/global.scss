@@ -14,7 +14,7 @@
   --color-terciary: #e80f5d;
   --color-muted: #ffabab;
 
-  --chat-bubble-theirs: #e9135c;
+  // --chat-bubble-theirs: #e9135c;
   --chat-bubble-theirs-border: #f0694f;
   --chat-bubble-yours: #e9135c;
 
@@ -52,10 +52,18 @@ body {
   height: 100%;
 }
 
-main {
+main,
+.main_secondary {
   min-height: 100%;
   padding: 0 50px;
+}
+
+main {
   background: var(--background-gradient);
+}
+
+.main_secondary {
+  background: #fff;
 }
 
 a {

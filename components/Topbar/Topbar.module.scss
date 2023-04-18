@@ -6,12 +6,16 @@
 
   .arrow {
     width: 10px;
+    cursor: pointer;
   }
 
   .logo {
-    width: 55px;
-    height: 55px;
     justify-self: end;
     float: right;
+
+    width: 55px;
+    height: 55px;
+
+    cursor: pointer;
   }
 }
