@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 export default function Rewards() {
   return (
     <main className="main_secondary">
-      <Topbar useSecondaryColor={true} showMenu={true} />
+      <Topbar useSecondaryColor={true} showMenu={true} link="/profile" />
       <SectionHeadingSecondary>Rewards</SectionHeadingSecondary>
 
       <div className={styles.profile_stars}>

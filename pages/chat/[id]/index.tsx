@@ -30,7 +30,11 @@ export default function Chat() {
           <div className={styles.profile_info_rating}>
             <p>Rate:</p>
             <div>
-              <div className={styles.star}></div>
+              <div className={styles.stars}>
+                {Array.from({ length: 5 }, (v, i) => (
+                  <img src="/assets/star_orange.svg" alt="Star" />
+                ))}
+              </div>
             </div>
           </div>
         </div>

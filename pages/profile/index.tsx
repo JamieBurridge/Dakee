@@ -7,7 +7,7 @@ import { dummyUsers } from "../../helpers/users";
 export default function Profile() {
   return (
     <main className="main_secondary">
-      <Topbar showMenu={true} useSecondaryColor={true} />
+      <Topbar showMenu={true} useSecondaryColor={true} link="/" />
 
       <section className={styles.content}>
         <SectionHeadingSecondary padding="0 0 25px 0">
