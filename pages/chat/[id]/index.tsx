@@ -1,8 +1,11 @@
 import React from "react";
 import Topbar from "../../../components/Topbar/Topbar";
 import styles from "./index.module.scss";
+import { useState } from "react";
 
 export default function Chat() {
+  const [rating, setRating] = useState(1);
+
   return (
     <main className="main_secondary">
       <Topbar
@@ -31,8 +34,25 @@ export default function Chat() {
             <p>Rate:</p>
             <div>
               <div className={styles.stars}>
-                {Array.from({ length: 5 }, (v, i) => (
-                  <img src="/assets/star_orange.svg" alt="Star" />
+                {Array.from({ length: rating }, (v, i) => (
+                  <img
+                    src="/assets/star.svg"
+                    alt="Star"
+                    onClick={() => {
+                      setRating(i + 1);
+                    }}
+                  />
+                ))}
+
+                {Array.from({ length: 5 - rating }, (v, i) => (
+                  <img
+                    src="/assets/star_orange.svg"
+                    alt="Star"
+                    onClick={() => {
+                      console.log(i + rating);
+                      setRating(i + rating + 1);
+                    }}
+                  />
                 ))}
               </div>
             </div>

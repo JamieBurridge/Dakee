@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import Topbar from "../../components/Topbar/Topbar";
 import SectionHeadingSecondary from "../../components/SectionHeadings/SectionHeadingSecondary";
 import { dummyUsers } from "../../helpers/users";
+import { useState } from "react";
 
 export default function Profile() {
   return (
