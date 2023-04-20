@@ -3,15 +3,9 @@ import FiltersOverlay from "../components/FiltersOverlay/FiltersOverlay";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
 import Topbar from "../components/Topbar/Topbar";
 import styles from "./index.module.scss";
+import SectionHeadingPrimary from "../components/SectionHeadings/SectionHeadingPrimary";
 
-const dummyProfiles = [
-  {
-    name: "Iva Hardy",
-    rating: "4.6",
-    picture: "/assets/profile-pic.jpeg",
-    topics: [{ name: "art" }, { name: "food" }, { name: "music" }],
-  },
-];
+import { dummyUsers } from "../helpers/users";
 
 export default function Home() {
   // const hasVisited: boolean = false;
@@ -29,7 +23,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <Topbar showBackArrow={false} menu={true} />
+      <Topbar showBackArrow={false} showMenu={true} />
 
       <FiltersOverlay
         showOverlay={showFilterOverlay}
@@ -37,7 +31,9 @@ export default function Home() {
       />
 
       <div className={styles.content}>
-        <h1>Find the Local!</h1>
+        <SectionHeadingPrimary padding="0 0 20px 0">
+          Find the Local!
+        </SectionHeadingPrimary>
         <div className={styles.search_input_container}>
           <input
             type="text"
@@ -54,7 +50,7 @@ export default function Home() {
         </div>
 
         {/* If no data */}
-        {!dummyProfiles && (
+        {!dummyUsers && (
           <div className={styles.search_empty}>
             <img
               src="/assets/magnifying_glass.svg"
@@ -67,9 +63,9 @@ export default function Home() {
         )}
 
         {/* If data */}
-        {dummyProfiles && (
+        {dummyUsers && (
           <div className={styles.search_results}>
-            {dummyProfiles?.map((profile, index) => (
+            {dummyUsers?.map((profile, index) => (
               <ProfileCard key={index} {...profile} />
             ))}
           </div>

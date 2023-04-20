@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { gendersData } from "../../helpers/genders";
-import { topicsData } from "../../helpers/topics";
+import { gendersData, topicsData } from "../../helpers/userInformationData";
 import styles from "./FiltersOverlay.module.scss";
 
 const FiltersOverlay = ({ showOverlay, setShowOverlay }) => {

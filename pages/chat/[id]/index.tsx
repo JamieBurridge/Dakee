@@ -7,7 +7,7 @@ export default function Chat() {
     <main className="main_secondary">
       <Topbar
         showBackArrow={true}
-        menu={true}
+        showMenu={true}
         link="/chat"
         useSecondaryColor={true}
       />

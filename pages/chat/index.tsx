@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 import ChatMessagePreview from "../../components/ChatMessagePreview/ChatMessagePreview";
 import NotificationBubble from "../../components/NotificationBubble/NotificationBubble";
 import { useRouter } from "next/router";
+import SectionHeadingSecondary from "../../components/SectionHeadings/SectionHeadingSecondary";
 
 const localsDummyData = [
   {
@@ -35,11 +36,11 @@ export default function Chats() {
     <main className="main_secondary">
       <Topbar
         showBackArrow={true}
-        menu={true}
+        showMenu={true}
         link="/"
         useSecondaryColor={true}
       />
-      <h1 className={styles.chat_heading}>Chat</h1>
+      <SectionHeadingSecondary>Chat</SectionHeadingSecondary>
 
       <div className={styles.chat_tabs}>
         <ul>

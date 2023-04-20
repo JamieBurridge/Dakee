@@ -1,12 +1,6 @@
 .content {
   color: var(--color-secondary);
 
-  h1 {
-    font-size: 36px;
-    font-weight: 700;
-    padding-bottom: 25px;
-  }
-
   .profile {
     display: flex;
     align-items: center;
@@ -23,7 +17,7 @@
       padding: 15px 0;
     }
 
-    .profile_stars {
+    .profile_rating {
       display: flex;
       gap: 5px;
 
@@ -32,7 +26,7 @@
       }
     }
 
-    .profile_rating {
+    .profile_stars {
       display: flex;
       align-items: center;
       gap: 5px;

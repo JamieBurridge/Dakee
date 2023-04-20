@@ -8,7 +8,7 @@ interface Topics {
 
 interface ProfileCardInterface {
   name: string;
-  rating: string;
+  rating: number;
   picture: string;
   topics: Topics[];
 }

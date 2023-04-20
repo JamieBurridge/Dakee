@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Menu.module.scss";
+import SectionHeadingSecondary from "../SectionHeadings/SectionHeadingSecondary";
 
 interface MenuInterface {
   showMenu: boolean;
@@ -41,7 +42,9 @@ export default function Menu({ showMenu, setShowMenu }: MenuInterface) {
             <img src="/assets/back_orange.svg" alt="Back arrow" />
           </div>
           <div className={styles.content}>
-            <h1>Menu</h1>
+            <SectionHeadingSecondary padding="50px 0 100px 0">
+              Menu
+            </SectionHeadingSecondary>
             <ul>
               {navLinksData?.map((data, index) => (
                 <li key={index} onClick={() => setShowMenu(false)}>

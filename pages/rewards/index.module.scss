@@ -1,0 +1,18 @@
+.profile_stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding-top: 10px;
+
+  p {
+    color: var(--color-terciary);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}

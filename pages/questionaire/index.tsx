@@ -1,14 +1,9 @@
-import React from "react";
-import Topbar from "../../components/Topbar/Topbar";
-import styles from "./index.module.scss";
 import { useState } from "react";
-import QuestionaireOption from "../../components/QuestionaireOption/QuestionaireOption";
-import { questionaireData } from "../../helpers/questionaireData";
 import Button from "../../components/Button/Button";
-import { agesData } from "../../helpers/ages";
-import { gendersData } from "../../helpers/genders";
-import { userTypeData } from "../../helpers/user_type";
-import { topicsData } from "../../helpers/topics";
+import QuestionaireOption from "../../components/QuestionaireOption/QuestionaireOption";
+import Topbar from "../../components/Topbar/Topbar";
+import { questionaireData } from "../../helpers/userInformationData";
+import styles from "./index.module.scss";
 
 export default function questionaire() {
   const [step, setStep] = useState(0);
@@ -25,31 +20,40 @@ export default function questionaire() {
         <p className={styles.options_heading}>
           {questionaireData[step].heading}
         </p>
+
         <div
           className={styles.options_grid}
           style={{
             gridTemplateColumns: `${
-              questionaireData[step].stepType == "CardSelection"
-                ? "repeat(2, 1fr)"
-                : "repeat(1, 1fr)"
+              step === 3 ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
             }`,
-            gap: `${
-              questionaireData[step].stepType == "CardSelection"
-                ? "20px"
-                : "80px"
-            }`,
+            gap: `${step === 3 ? "80px" : "20px"}`,
           }}
         >
-          {questionaireData[step].stepType == "CardSelection" &&
-            questionaireData[step]?.options?.map((option, index) => (
+          {step === 0 &&
+            questionaireData[0].data.map((option, index) => (
               <QuestionaireOption
                 icon={option.icon}
-                text={option.text}
+                text={option.type}
                 key={index}
               />
             ))}
 
-          {questionaireData[step]?.stepType == "Country" && (
+          {step === 1 &&
+            questionaireData[1].data.map((option, index) => (
+              <QuestionaireOption text={option.age} key={index} />
+            ))}
+
+          {step === 2 &&
+            questionaireData[2].data.map((option, index) => (
+              <QuestionaireOption
+                icon={option.icon}
+                text={option.type}
+                key={index}
+              />
+            ))}
+
+          {step === 3 && (
             <>
               <div className={styles.inputOption}>
                 <label htmlFor="country">I currently live in:</label>
@@ -77,6 +81,15 @@ export default function questionaire() {
               </div>
             </>
           )}
+
+          {step === 4 &&
+            questionaireData[4].data.map((option, index) => (
+              <QuestionaireOption
+                icon={option.icon}
+                text={option.type}
+                key={index}
+              />
+            ))}
         </div>
 
         {step == questionaireData.length - 1 ? (

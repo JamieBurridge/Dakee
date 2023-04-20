@@ -4,13 +4,7 @@
 
   .content {
     color: var(--color-primary);
-
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      text-align: center;
-      padding-bottom: 20px;
-    }
+    padding-bottom: 20px;
 
     .search_input_container {
       display: flex;
@@ -56,6 +50,12 @@
         text-align: center;
         padding-top: 40px;
       }
+    }
+
+    .search_results {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
     }
   }
 }
