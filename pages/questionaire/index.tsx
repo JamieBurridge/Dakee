@@ -25,7 +25,9 @@ export default function questionaire() {
           className={styles.options_grid}
           style={{
             gridTemplateColumns: `${
-              step === 3 ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
+              step === 3
+                ? "repeat(1, 1fr)"
+                : "repeat(auto-fit, minmax(120px, 1fr))"
             }`,
             gap: `${step === 3 ? "80px" : "20px"}`,
           }}
