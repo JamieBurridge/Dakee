@@ -16,7 +16,7 @@ const navLinksData = [
     text: "Chat",
   },
   {
-    href: "/my-profile",
+    href: "/profile",
     text: "My profile",
   },
   {
