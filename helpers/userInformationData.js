@@ -96,11 +96,11 @@ export const questionaireData = [
     data: agesData,
   },
   {
-    heading: "",
-  },
-  {
     heading: "Gender:",
     data: gendersData,
+  },
+  {
+    heading: "",
   },
   {
     heading: "Travel experience preferences:",
