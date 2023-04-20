@@ -13,7 +13,12 @@ export default function questionaire() {
   return (
     <main className={styles.questionaire_main}>
       <div>
-        <Topbar link="tutorial-done" />
+        <Topbar
+          showBackArrow={step > 0}
+          onClickArrow={() => {
+            setStep(step - 1);
+          }}
+        />
       </div>
       <div className={styles.content}>
         <p className={styles.step}>{step + 1}/5</p>

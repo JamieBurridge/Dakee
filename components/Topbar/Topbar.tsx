@@ -5,23 +5,25 @@ import { useState } from "react";
 import Menu from "../Menu/Menu";
 
 interface Topbar {
-  link?: string | undefined;
   showLogo?: boolean;
   showBackArrow?: boolean;
+  showMenu?: boolean;
   useSecondaryColor?: boolean;
   offsetTop?: string;
-  showMenu?: boolean;
+  link?: string | undefined;
   onClick?: any;
+  onClickArrow?: any;
 }
 
 export default function Topbar({
-  link,
   showLogo = true,
   showBackArrow = true,
+  showMenu: menu = false,
   useSecondaryColor,
   offsetTop = "35px",
-  showMenu: menu = false,
+  link,
   onClick,
+  onClickArrow,
 }: Topbar) {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
@@ -43,7 +45,11 @@ export default function Topbar({
                   : "/assets/back.svg"
               }
               alt="Back arrow"
-              onClick={onClick ? () => router.push(link) : null}
+              onClick={
+                link || onClickArrow
+                  ? () => (link ? router.push(link) : onClickArrow())
+                  : null
+              }
               className={styles.arrow}
             />
           )}
