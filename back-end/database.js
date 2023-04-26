@@ -10,12 +10,4 @@ const connection = createConnection({
   database: process.env.DB_NAME,
 });
 
-connection.connect((err) => {
-  if (err) {
-    console.error("Error connecting to MySQL:", err);
-  } else {
-    console.log("Connected to MySQL");
-  }
-});
-
 export default connection;
