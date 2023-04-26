@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./index.module.scss";
 import Button from "../../components/Button/Button";
+import Link from "next/link";
 
 export default function welcome() {
   const [hasTapped, setHasTapped] = useState<boolean>(false);
@@ -23,7 +24,9 @@ export default function welcome() {
             <Button link="/signup" type="button">
               Sign up
             </Button>
-            <button className={styles.button_login}>Log in</button>
+            <Link href="/login">
+              <button className={styles.button_login}>Log in</button>
+            </Link>
           </div>
         </>
       ) : (
