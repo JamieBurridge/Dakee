@@ -7,6 +7,23 @@ import Topbar from "../../components/Topbar/Topbar";
 export default function Signup() {
   const [passwordHidden, setPasswordHidden] = useState(true);
 
+  const [name, setName] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [password, setPassword] = useState<string>();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch("http://localhost:5000/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, name, password }),
+    });
+    const data = await response.text();
+    console.log(data);
+  };
+
   return (
     <main className={styles.signup_container}>
       <div>
@@ -18,9 +35,21 @@ export default function Signup() {
           Sign up <br />
           with e-mail
         </h2>
-        <form>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="email" name="email" placeholder="E-mail" />
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
           <div className={styles.password_input_container}>
             <img
               src={`/assets/${
@@ -33,11 +62,11 @@ export default function Signup() {
               type={passwordHidden ? "password" : "text"}
               name="password"
               placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
-          <Button link="/tutorial" type="button">
-            Sign up
-          </Button>
+          <Button type="submit">Sign up</Button>
         </form>
         <div className={styles.other_signup_methods}>
           <p>or sign up using:</p>

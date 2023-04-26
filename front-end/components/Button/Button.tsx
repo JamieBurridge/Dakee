@@ -7,17 +7,18 @@ import { useRouter } from "next/router";
 interface Button {
   children: any;
   link?: string;
+  onClick?: any;
   type: "button" | "submit";
 }
 
-export default function Button({ children, link, type }: Button) {
+export default function Button({ children, link, type, onClick }: Button) {
   const router = useRouter();
 
   return (
     <button
       className={styles.button}
       type={type}
-      onClick={() => link && router.push(link)}
+      onClick={() => (onClick ? onClick() : link && router.push(link))}
     >
       {children}
     </button>
