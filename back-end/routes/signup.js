@@ -1,5 +1,6 @@
 import connection from "../database.js";
 import { Router } from "express";
+import md5 from "md5";
 
 const router = Router();
 
@@ -12,7 +13,7 @@ router.post("/", async (req, res) => {
   ).execute("INSERT INTO users (email, name, password) VALUES (?, ?, ?)", [
     email,
     name,
-    password,
+    md5(password),
   ]);
 });
 

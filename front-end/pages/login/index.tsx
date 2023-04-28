@@ -7,6 +7,22 @@ import Topbar from "../../components/Topbar/Topbar";
 export default function Login() {
   const [passwordHidden, setPasswordHidden] = useState(true);
 
+  const [email, setEmail] = useState<string>();
+  const [password, setPassword] = useState<string>();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await response.text();
+    console.log(data);
+  };
+
   return (
     <main className={styles.login_container}>
       <div>
@@ -15,8 +31,13 @@ export default function Login() {
       <img src="/assets/logo.svg" alt="Dakee logo" className={styles.logo} />
       <div>
         <h2 className={styles.heading}>Login</h2>
-        <form>
-          <input type="email" name="email" placeholder="E-mail" />
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <div className={styles.password_input_container}>
             <img
               src={`/assets/${
@@ -29,11 +50,10 @@ export default function Login() {
               type={passwordHidden ? "password" : "text"}
               name="password"
               placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Button link="/tutorial" type="button">
-            Login
-          </Button>
+          <Button type="submit">Login</Button>
         </form>
         <div className={styles.other_login_methods}>
           <p>or login using:</p>
