@@ -30,29 +30,20 @@ export default function questionaire() {
           className={styles.options_grid}
           style={{
             gridTemplateColumns: `${
-              step === 3
+              step === 2
                 ? "repeat(1, 1fr)"
                 : "repeat(auto-fit, minmax(120px, 1fr))"
             }`,
-            gap: `${step === 3 ? "80px" : "20px"}`,
+            gap: `${step === 2 ? "80px" : "20px"}`,
           }}
         >
           {step === 0 &&
             questionaireData[0].data.map((option, index) => (
-              <QuestionaireOption
-                icon={option.icon}
-                text={option.type}
-                key={index}
-              />
+              <QuestionaireOption text={option.age} key={index} />
             ))}
 
           {step === 1 &&
             questionaireData[1].data.map((option, index) => (
-              <QuestionaireOption text={option.age} key={index} />
-            ))}
-
-          {step === 2 &&
-            questionaireData[2].data.map((option, index) => (
               <QuestionaireOption
                 icon={option.icon}
                 text={option.type}
@@ -60,7 +51,7 @@ export default function questionaire() {
               />
             ))}
 
-          {step === 3 && (
+          {step === 2 && (
             <>
               <div className={styles.inputOption}>
                 <label htmlFor="country">I currently live in:</label>
@@ -89,8 +80,8 @@ export default function questionaire() {
             </>
           )}
 
-          {step === 4 &&
-            questionaireData[4].data.map((option, index) => (
+          {step === 3 &&
+            questionaireData[3].data.map((option, index) => (
               <QuestionaireOption
                 icon={option.icon}
                 text={option.type}

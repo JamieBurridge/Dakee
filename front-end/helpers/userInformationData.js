@@ -88,10 +88,6 @@ export const userTypeData = [
 
 export const questionaireData = [
   {
-    heading: "I am a:",
-    data: userTypeData,
-  },
-  {
     heading: "Age:",
     data: agesData,
   },

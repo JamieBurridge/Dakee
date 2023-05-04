@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "prod-start": "node server.js",
+    "start": "node server.js",
     "dev-start": "nodemon server.js"
   },
   "dependencies": {
