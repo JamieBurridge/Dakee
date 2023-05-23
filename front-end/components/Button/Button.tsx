@@ -9,14 +9,23 @@ interface Button {
   link?: string;
   onClick?: any;
   type: "button" | "submit";
+  secondaryColor?: boolean;
 }
 
-export default function Button({ children, link, type, onClick }: Button) {
+export default function Button({
+  children,
+  link,
+  type,
+  onClick,
+  secondaryColor = false,
+}: Button) {
   const router = useRouter();
 
   return (
     <button
-      className={styles.button}
+      className={`${styles.button} ${
+        secondaryColor ? styles.secondaryColor : styles.primaryColor
+      }`}
       type={type}
       onClick={() => (onClick ? onClick() : link && router.push(link))}
     >

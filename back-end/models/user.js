@@ -1,4 +1,5 @@
-import connection from "../database";
+import connection from "../database.js";
+import md5 from "md5";
 
 export default class User {
   constructor(id, name, password, email) {

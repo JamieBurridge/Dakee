@@ -1,7 +1,8 @@
 import connection from "../database.js";
 import { Router } from "express";
 import md5 from "md5";
-import passport from "passport-local";
+import passport from "passport";
+import LocalStrategy from "passport-local";
 import User from "../models/user.js";
 
 const router = Router();
@@ -53,10 +54,10 @@ router.post("/signup", async (req, res) => {
 
 router.post(
   "/login",
-  passport.authenticate("local", { failureRedirect: "/login" }),
-  function (req, res) {
-    res.redirect("/");
-  }
+  passport.authenticate("local", {
+    successRedirect: "/",
+    failureRedirect: "/login",
+  })
 );
 
 export default router;

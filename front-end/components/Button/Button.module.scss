@@ -5,10 +5,18 @@
 
   font-size: 16px;
   font-weight: 700;
-  color: var(--color-primary);
 
-  border: 2px solid var(--color-primary);
   border-radius: 70px;
 
   padding: 20px 80px;
+
+  &.primaryColor {
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  &.secondaryColor {
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+  }
 }
