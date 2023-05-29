@@ -1,6 +1,8 @@
-# Dakee
+# Dakee 
 
 Dakee is a project built with Next.js and Express.js.
+
+Vercel: https://dakee.vercel.app/
 
 ## Prerequisites to work on the project
 
