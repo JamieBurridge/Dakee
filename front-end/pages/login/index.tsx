@@ -19,8 +19,7 @@ export default function Login() {
       },
       body: JSON.stringify({ email, password }),
     });
-    const data = await response.text();
-    console.log(data);
+    await response.text();
   };
 
   return (
@@ -55,14 +54,6 @@ export default function Login() {
           </div>
           <Button type="submit">Login</Button>
         </form>
-        <div className={styles.other_login_methods}>
-          <p>or login using:</p>
-          <div>
-            <img src="/assets/facebook.svg" alt="facebook" />
-            <img src="/assets/google.svg" alt="google" />
-            <img src="/assets/apple.svg" alt="apple" />
-          </div>
-        </div>
       </div>
     </main>
   );

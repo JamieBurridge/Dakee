@@ -40,7 +40,7 @@ export default function Profile() {
         <div className={styles.profile_links}>
           <a href="/rewards">Get rewards</a>
           <a href="#">Saved rewards</a>
-          <a href="#">Edit preferences</a>
+          <a href="/profile-edit">Edit preferences</a>
           <a href="#">Log out</a>
         </div>
       </section>

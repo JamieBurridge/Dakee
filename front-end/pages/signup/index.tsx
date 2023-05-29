@@ -92,14 +92,6 @@ export default function Signup() {
           </div>
           <Button type="submit">Sign up</Button>
         </form>
-        <div className={styles.other_signup_methods}>
-          <p>or sign up using:</p>
-          <div>
-            <img src="/assets/facebook.svg" alt="facebook" />
-            <img src="/assets/google.svg" alt="google" />
-            <img src="/assets/apple.svg" alt="apple" />
-          </div>
-        </div>
       </div>
     </main>
   );

@@ -16,6 +16,5 @@ app.use(cors());
 
 // Routes
 app.use("/auth", authRouter);
-// app.use("/login", loginRouter);
 
 app.listen(process.env.PORT);

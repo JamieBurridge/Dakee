@@ -7,7 +7,7 @@ import User from "../models/user.js";
 
 const router = Router();
 
-// Creat passport
+// Create passport
 passport.use(
   new LocalStrategy(function (email, password, done) {
     User.findOne(

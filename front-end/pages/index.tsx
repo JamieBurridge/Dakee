@@ -46,6 +46,7 @@ export default function Home() {
             <img src="/assets/filter.svg" alt="Filter icon" />
             Filters
           </div>
+
           <div>Search &gt;</div>
         </div>
 

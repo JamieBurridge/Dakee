@@ -1,10 +1,10 @@
-const withOffline = require("next-offline");
+const withPWA = require("next-pwa")({
+  dest: "public",
+});
 
-const nextConfig = {
+module.exports = withPWA({
   webpack(config) {
     config.resolve.extensions.push(".ts", ".tsx");
     return config;
   },
-};
-
-module.exports = withOffline(nextConfig);
+});

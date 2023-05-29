@@ -1,0 +1,9 @@
+{
+  "theme_color": "#F0694F",
+  "background_color": "#F0694F",
+  "display": "standalone",
+  "start_url": "/",
+  "name": "dakee",
+  "short_name": "dakee",
+  "description": "Dakee PWA app"
+}
