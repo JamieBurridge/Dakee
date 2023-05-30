@@ -6,8 +6,5 @@ run-local:
 	cd front-end && yarn dev & cd back-end && yarn dev
 
 # Run docker 
-build:
-	docker build -t dakee .
-
 run:
-	docker run --rm -it -p 3000:3000 dakee
+	docker-compose up
