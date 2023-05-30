@@ -28,6 +28,36 @@ passport.use(
   })
 );
 
+/**
+ * @swagger
+ * /api/auth/signup:
+ *   post:
+ *     summary: User signup
+ *     description: Create a new user.
+ *     tags: [Auth]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *             required:
+ *               - username
+ *               - email
+ *               - password
+ *     responses:
+ *       201:
+ *         description: User created successfully.
+ *       400:
+ *         description: Invalid request body.
+ */
 router.post("/signup", async (req, res) => {
   const { email, name, password } = req.body;
 
@@ -52,6 +82,33 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+/**
+ * @swagger
+ * /api/auth/login:
+ *   post:
+ *     summary: User login
+ *     description: Login.
+ *     tags: [Auth]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *             required:
+ *               - email
+ *               - password
+ *     responses:
+ *       201:
+ *         description: User logged in successfully.
+ *       400:
+ *         description: Invalid request body.
+ */
 router.post(
   "/login",
   passport.authenticate("local", {
